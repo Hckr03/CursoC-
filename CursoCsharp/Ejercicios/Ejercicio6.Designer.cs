@@ -32,19 +32,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNum1 = new System.Windows.Forms.Label();
             this.lblOperacion = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnCopiar = new System.Windows.Forms.Button();
             this.txtPantalla = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDiv = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnMulti = new System.Windows.Forms.Button();
+            this.btnRestar = new System.Windows.Forms.Button();
+            this.btnSumar = new System.Windows.Forms.Button();
             this.btnIgual = new System.Windows.Forms.Button();
             this.panelNumerico = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAC = new System.Windows.Forms.Button();
+            this.btnPorcentaje = new System.Windows.Forms.Button();
+            this.btnOff = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -68,7 +68,7 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Controls.Add(this.lblNum1);
             this.panel1.Controls.Add(this.lblOperacion);
-            this.panel1.Controls.Add(this.button9);
+            this.panel1.Controls.Add(this.btnCopiar);
             this.panel1.Controls.Add(this.txtPantalla);
             this.panel1.Controls.Add(this.flowLayoutPanel2);
             this.panel1.Controls.Add(this.panelNumerico);
@@ -89,6 +89,7 @@
             this.lblNum1.TabIndex = 6;
             this.lblNum1.Text = "0";
             this.lblNum1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblNum1.Visible = false;
             // 
             // lblOperacion
             // 
@@ -100,19 +101,21 @@
             this.lblOperacion.TabIndex = 5;
             this.lblOperacion.Text = "0";
             this.lblOperacion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblOperacion.Visible = false;
             // 
-            // button9
+            // btnCopiar
             // 
-            this.button9.BackgroundImage = global::CursoCsharp.Properties.Resources.copiar;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(202, 268);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(30, 30);
-            this.button9.TabIndex = 0;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnCopiar.BackgroundImage = global::CursoCsharp.Properties.Resources.copiar;
+            this.btnCopiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCopiar.FlatAppearance.BorderSize = 0;
+            this.btnCopiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCopiar.ForeColor = System.Drawing.Color.White;
+            this.btnCopiar.Location = new System.Drawing.Point(202, 249);
+            this.btnCopiar.Name = "btnCopiar";
+            this.btnCopiar.Size = new System.Drawing.Size(30, 30);
+            this.btnCopiar.TabIndex = 0;
+            this.btnCopiar.UseVisualStyleBackColor = true;
+            this.btnCopiar.Click += new System.EventHandler(this.btnCopiar_Click);
             // 
             // txtPantalla
             // 
@@ -131,9 +134,9 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnDiv);
-            this.flowLayoutPanel2.Controls.Add(this.button4);
-            this.flowLayoutPanel2.Controls.Add(this.button5);
-            this.flowLayoutPanel2.Controls.Add(this.button8);
+            this.flowLayoutPanel2.Controls.Add(this.btnMulti);
+            this.flowLayoutPanel2.Controls.Add(this.btnRestar);
+            this.flowLayoutPanel2.Controls.Add(this.btnSumar);
             this.flowLayoutPanel2.Controls.Add(this.btnIgual);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(441, 307);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -157,53 +160,56 @@
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
-            // button4
+            // btnMulti
             // 
-            this.button4.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(3, 79);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 70);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnMulti.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
+            this.btnMulti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMulti.FlatAppearance.BorderSize = 0;
+            this.btnMulti.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnMulti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnMulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMulti.ForeColor = System.Drawing.Color.White;
+            this.btnMulti.Location = new System.Drawing.Point(3, 79);
+            this.btnMulti.Name = "btnMulti";
+            this.btnMulti.Size = new System.Drawing.Size(70, 70);
+            this.btnMulti.TabIndex = 2;
+            this.btnMulti.Text = "X";
+            this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
-            // button5
+            // btnRestar
             // 
-            this.button5.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(3, 155);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 70);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRestar.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
+            this.btnRestar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRestar.FlatAppearance.BorderSize = 0;
+            this.btnRestar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRestar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRestar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestar.ForeColor = System.Drawing.Color.White;
+            this.btnRestar.Location = new System.Drawing.Point(3, 155);
+            this.btnRestar.Name = "btnRestar";
+            this.btnRestar.Size = new System.Drawing.Size(70, 70);
+            this.btnRestar.TabIndex = 2;
+            this.btnRestar.Text = "-";
+            this.btnRestar.UseVisualStyleBackColor = true;
+            this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
             // 
-            // button8
+            // btnSumar
             // 
-            this.button8.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(3, 231);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(70, 70);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "+";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSumar.BackgroundImage = global::CursoCsharp.Properties.Resources.btn1;
+            this.btnSumar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSumar.FlatAppearance.BorderSize = 0;
+            this.btnSumar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSumar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSumar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSumar.ForeColor = System.Drawing.Color.White;
+            this.btnSumar.Location = new System.Drawing.Point(3, 231);
+            this.btnSumar.Name = "btnSumar";
+            this.btnSumar.Size = new System.Drawing.Size(70, 70);
+            this.btnSumar.TabIndex = 2;
+            this.btnSumar.Text = "+";
+            this.btnSumar.UseVisualStyleBackColor = true;
+            this.btnSumar.Click += new System.EventHandler(this.btnSumar_Click);
             // 
             // btnIgual
             // 
@@ -231,61 +237,64 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Controls.Add(this.btnAC);
+            this.flowLayoutPanel1.Controls.Add(this.btnPorcentaje);
+            this.flowLayoutPanel1.Controls.Add(this.btnOff);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(202, 307);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(234, 77);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // button1
+            // btnAC
             // 
-            this.button1.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 70);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "AC";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAC.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
+            this.btnAC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAC.FlatAppearance.BorderSize = 0;
+            this.btnAC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAC.ForeColor = System.Drawing.Color.White;
+            this.btnAC.Location = new System.Drawing.Point(3, 3);
+            this.btnAC.Name = "btnAC";
+            this.btnAC.Size = new System.Drawing.Size(70, 70);
+            this.btnAC.TabIndex = 0;
+            this.btnAC.Text = "AC";
+            this.btnAC.UseVisualStyleBackColor = true;
+            this.btnAC.Click += new System.EventHandler(this.btnAC_Click);
             // 
-            // button2
+            // btnPorcentaje
             // 
-            this.button2.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(79, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 70);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "%";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPorcentaje.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
+            this.btnPorcentaje.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPorcentaje.FlatAppearance.BorderSize = 0;
+            this.btnPorcentaje.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnPorcentaje.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnPorcentaje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPorcentaje.ForeColor = System.Drawing.Color.White;
+            this.btnPorcentaje.Location = new System.Drawing.Point(79, 3);
+            this.btnPorcentaje.Name = "btnPorcentaje";
+            this.btnPorcentaje.Size = new System.Drawing.Size(70, 70);
+            this.btnPorcentaje.TabIndex = 0;
+            this.btnPorcentaje.Text = "%";
+            this.btnPorcentaje.UseVisualStyleBackColor = true;
+            this.btnPorcentaje.Click += new System.EventHandler(this.btnPorcentaje_Click);
             // 
-            // button3
+            // btnOff
             // 
-            this.button3.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(155, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 70);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Off";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnOff.BackgroundImage = global::CursoCsharp.Properties.Resources.btn2;
+            this.btnOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOff.FlatAppearance.BorderSize = 0;
+            this.btnOff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnOff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnOff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOff.ForeColor = System.Drawing.Color.White;
+            this.btnOff.Location = new System.Drawing.Point(155, 3);
+            this.btnOff.Name = "btnOff";
+            this.btnOff.Size = new System.Drawing.Size(70, 70);
+            this.btnOff.TabIndex = 1;
+            this.btnOff.Text = "Off";
+            this.btnOff.UseVisualStyleBackColor = true;
+            this.btnOff.Click += new System.EventHandler(this.btnOff_Click);
             // 
             // Ejercicio6
             // 
@@ -311,19 +320,19 @@
 
         private System.Windows.Forms.Label lblEjercicio6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnCopiar;
         private System.Windows.Forms.TextBox txtPantalla;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Button btnDiv;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnMulti;
+        private System.Windows.Forms.Button btnRestar;
+        private System.Windows.Forms.Button btnSumar;
         private System.Windows.Forms.Button btnIgual;
         private System.Windows.Forms.FlowLayoutPanel panelNumerico;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAC;
+        private System.Windows.Forms.Button btnPorcentaje;
+        private System.Windows.Forms.Button btnOff;
         private System.Windows.Forms.Label lblNum1;
         private System.Windows.Forms.Label lblOperacion;
     }
